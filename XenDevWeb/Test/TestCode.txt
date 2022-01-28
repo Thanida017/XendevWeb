@@ -1,0 +1,40 @@
+//string base64 = images.ImageUrl.ToString().Replace("data:image/gif;base64,", "");
+                //System.Drawing.Image imagesss;
+                //byte[] bytes = Convert.FromBase64String(base64);
+                
+                //using (MemoryStream ms = new MemoryStream(bytes))
+                //{
+                //    imagesss = System.Drawing.Image.FromStream(ms);
+                //}
+               
+                //if (images != null)
+                //{
+                //    List<domain.Image> allImg = this.imgDAO.getAllCompanies(true)
+                //                                          .ToList();
+                //    foreach (domain.Image img in allImg)
+                //    {
+                //        System.Web.UI.WebControls.Image imgss = new System.Web.UI.WebControls.Image();
+                //        imgss.ImageUrl = WebUtils.getImageAppChangeBase64(img.serverImageFileName);
+                //        if (images.ImageUrl.ToString().CompareTo(imgss.ImageUrl) == 0)
+                //        {
+                //            domain.Image imgObj = new domain.Image();
+                //            imgObj.ticket = obj;
+                //            imgObj.originalImageFileName = img.originalImageFileName;
+                //            imgObj.serverImageFileName = img.serverImageFileName;
+                //            imgObj.lastUpDate = DateTime.Now;
+                //            imgObj.creationDate = DateTime.Now;
+                //            imgObj.description = lblDescription.Text;
+                //            imgDAO.create(imgObj);
+                //        }
+                //    }
+                //}
+
+for (int n = 0; n < this.imageRepeater.Items.Count; n++)
+            {
+                RepeaterItem repeateItem = this.imageRepeater.Items[n];
+                Label lblDescription = repeateItem.FindControl("lblDescription") as Label;
+                Label lblImageID = repeateItem.FindControl("lblImageID") as Label;
+                System.Web.UI.WebControls.Image images = repeateItem.FindControl("images") as System.Web.UI.WebControls.Image;
+
+                
+            }

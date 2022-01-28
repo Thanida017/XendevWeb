@@ -1,0 +1,529 @@
+﻿<%@ Master Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="master.master.cs" 
+    Inherits="XenDevWeb.include.master" %>
+
+<%@ Import Namespace="XenDevWeb.Utils" %>
+
+<!DOCTYPE html>
+<html lang="en" runat="server">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="<%= XenDevWeb.Utils.WebUtils.getAppServerPath() %>/include/img/logoApp.png" />
+
+    <title>XenDevWeb</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<%= WebUtils.getAppServerPath() %>/include/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<%= WebUtils.getAppServerPath() %>/include/css/bootstrap-reset.css" rel="stylesheet" />
+
+    <!--external css-->
+    <link href="<%= WebUtils.getAppServerPath() %>/include/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/gritter/css/jquery.gritter.css" />
+    <link href="<%= WebUtils.getAppServerPath() %>/include/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-timepicker/compiled/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-datetimepicker/css/datetimepicker.css" />
+    <link rel="stylesheet" type="text/css" href="<%= WebUtils.getAppServerPath() %>/include/assets/jquery-multi-select/css/multi-select.css" />
+    <link rel="stylesheet" href="<%= WebUtils.getAppServerPath() %>/include/assets/data-tables/DT_bootstrap.css" />
+
+
+    <%--For graph rendering--%>
+    <link href="<%= WebUtils.getAppServerPath() %>/include/assets/morris.js-0.4.3/morris.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="<%= WebUtils.getAppServerPath() %>/include/css/style.css" rel="stylesheet">
+    <link href="<%= WebUtils.getAppServerPath() %>/include/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="<%= WebUtils.getAppServerPath() %>/include/js/html5shiv.js"></script>
+      <script src="<%= WebUtils.getAppServerPath() %>/include/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/jquery-1.8.3.min.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/jquery.BlockUI.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/assets/chart-master/Chart2.4.min.js"></script>
+        
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/rgbcolor.js"></script> 
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/StackBlur.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/canvg.js"></script> 
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/html2canvas.min.js"></script>
+
+       
+
+    <script type="text/javascript">
+        function scrollToErrorMessage() {
+            $('html, body').animate({ scrollTop: $('#contentDiv').offset().top }, 'slow');
+            return false;
+        }
+
+        function onExtenderLoading(source, eventArgs) {
+            document.getElementById(source._element.id).className = "form-control spinner";
+        }
+
+        function onExtenderLoaded(source, eventArgs) {
+            document.getElementById(source._element.id).className = "form-control";
+        }
+
+        function focusTxt(elem) {
+            var x, y;
+            // More sources for scroll x, y offset.
+            if (typeof (window.pageXOffset) !== 'undefined') {
+                x = window.pageXOffset;
+                y = window.pageYOffset;
+            } else if (typeof (window.scrollX) !== 'undefined') {
+                x = window.scrollX;
+                y = window.scrollY;
+            } else if (document.documentElement && typeof (document.documentElement.scrollLeft) !== 'undefined') {
+                x = document.documentElement.scrollLeft;
+                y = document.documentElement.scrollTop;
+            } else {
+                x = document.body.scrollLeft;
+                y = document.body.scrollTop;
+            }
+
+            var txtToFocus = document.getElementById(elem);
+            txtToFocus.focus();
+
+            if (typeof x !== 'undefined') {
+                // In some cases IE9 does not seem to catch instant scrollTo request.
+                setTimeout(function () {
+                    window.scrollTo(x, y);
+                }, 100);
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        .unselectable .ajax__html_editor_extender_container
+        {
+            height:auto;
+            /*width:auto;*/
+         }
+        .modalBackground
+        {
+            background-color: Black;
+            filter: alpha(opacity=40);
+            opacity: 0.4;
+        }
+        .modalPopup
+        {
+            background-color: #FFFFFF;
+            width: 300px;
+            border: 3px solid #0DA9D0;
+        }
+        .modalPopup .header
+        {
+            background-color: #2FBDF1;
+            height: 30px;
+            color: White;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .modalPopup .body
+        {
+            min-height: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .modalPopup .footer
+        {
+            padding: 3px;
+            text-align: center;
+        }
+        .modalPopup .yes, .modalPopup .no
+        {
+            height: 23px;
+            color: White;
+            line-height: 23px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modalPopup .yes
+        {
+            background-color: #2FBDF1;
+            border: 1px solid #0DA9D0;
+        }
+        .modalPopup .no
+        {
+            background-color: #9F9F9F;
+            border: 1px solid #5C5C5C;
+        }
+        .mbox {   
+            display: block;
+            float: left;
+            margin: 15px 10px 10px 15px;
+        }
+        .widerCal .ajax__calendar_header  {
+            width: 260px;
+            background:white;
+            border:1px black;
+        }
+        .widerCal .ajax__calendar_body  {
+            width: 260px;
+            height: 220px;
+            background:white;
+            border:1px black;
+        }
+        .widerCal .ajax__calendar_footer  {
+            width: 260px;
+            background:white;
+            border:1px black;
+        }
+        .widerCal .ajax__calendar_prev{
+           cursor:pointer;
+           width:15px;
+           height:15px;
+           float:left;
+           background-repeat:no-repeat;
+           background-position:50% 50%;
+           background-image:url(<%= WebUtils.getAppServerPath() %>/include/img/left-arrow.png);
+           background-color: none;
+        }
+        .widerCal .ajax__calendar_next{
+           cursor:pointer;
+           width:15px;
+           height:15px;
+           float:right;
+           background-repeat:no-repeat;
+           background-position:50% 50%;
+           background-image:url(<%= WebUtils.getAppServerPath() %>/include/img/right-arrow.png);
+           background-color: none;
+        }
+
+        /* Ref: https://stackoverflow.com/questions/12142548/calendar-extender-not-displaying-correctly */
+        .calendarContainerOverride table
+        {
+            width:0px;
+            height:0px;
+        }
+
+        .calendarContainerOverride table tr td
+        {
+            padding:0;
+            margin:0;
+        }
+
+        .canHover:hover{
+            height:50%;
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <section id="container" class="sidebar-closed">
+
+        <!--header start-->
+        <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips" id="sideBarToggle"></div>
+            </div>
+            <!--logo start-->
+            <div style="float: left; margin-top: 5px; margin-right: 15px">
+                <img src="<%= XenDevWeb.Utils.WebUtils.getAppServerPath() %>/include/img/logo.png"  Style="height: 45px" />
+            </div>
+            <!--logo end-->
+            
+            <div class="top-nav ">
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                       <%-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <b><span class="username"><%= System.Web.HttpContext.Current.User.Identity.Name %></span></b>
+                            <b class="caret"></b>
+
+                        </a>--%>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+                              <% if (language != null && language.CompareTo("th-TH") == 0) { %>
+                                     <img alt="" width="30" height="30" src="<%= WebUtils.getAppServerPath() %>/include/img/thailand.png">
+                              <%   }  else  { %>
+                                     <img alt="" width="30" height="30" src="<%= WebUtils.getAppServerPath() %>/include/img/Eng.png">
+                              <%   }  %>
+                          <span class="username"><asp:Label ID="lblCustomerName"  runat="server" /></span>
+                          <b class="caret"></b>
+                      </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li>
+                                <a href="<%= WebUtils.getAppServerPath() %>/switchLanguage.aspx?language=th-TH">
+                                    <img class="canHover"  src="<%= WebUtils.getAppServerPath() %>/include/img/thailand.png" width="30" height="30" style="margin-left: 50px" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<%= WebUtils.getAppServerPath() %>/switchLanguage.aspx?language=en-US">
+                                    <img class="canHover" src="<%= WebUtils.getAppServerPath() %>/include/img/Eng.png" width="30" height="30" style="margin-left: 80px;" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<%= WebUtils.getAppServerPath() %>/WebServices/SignOutHnd.aspx">
+                                    <asp:PlaceHolder runat="server">
+                                        <i class="fa fa-sign-out"></i>
+                                        <asp:Label ID="lblMenuSignout" runat="server" Text="Log out" />
+                                    </asp:PlaceHolder>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+
+
+        <!--sidebar start-->
+        <div id="sidebar" class="sidebar-closed">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <% if (this.hasAdminRole)
+                    { %>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-laptop"></i>
+                        <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_admin") %></span>
+                    </a>
+                    <ul class="sub">
+                        <%--<% if (this.user.hasAccessToPage("F002.UserAccount.aspx"))
+                            { %>--%>
+                         <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F012.StaffAccount.aspx">
+                                <i class="fa fa-briefcase"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff_account") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F002.UserAccount.aspx">
+                                <i class="fa fa-users"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_user_account") %></span>
+                            </a>
+                        </li>
+                        <%--<% } %>
+                        <% if (this.user.hasAccessToPage("F003.Company_Master.aspx"))
+                            { %>--%>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F003.Company_Master.aspx">
+                                <i class="fa fa-pencil-square"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_company_master") %></span>
+                            </a>
+                        </li>
+                       <%-- <% } %>
+                        <% if (this.user.hasAccessToPage("F004.Project.aspx"))
+                            { %>--%>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F004.Project.aspx">
+                                <i class="fa fa-tasks"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_project") %></span>
+                            </a>
+                        </li>
+                        <%--<% } %>--%>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F008.RejectReasonMaster.aspx">
+                                <i class="fa fa-times-circle-o"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_reject_reason_master") %></span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F016.StaffGanntChart.aspx">
+                                <i class="fa fa-sitemap"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff_gannt_chart") %></span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F018.ApprovalHierarchy.aspx">
+                                <i class="fa fa-code-fork"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_ApprovalHierarchy") %></span>
+                            </a>
+                        </li>
+                         <li style="display:none;">
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F029.ProjectMandays.aspx">
+                                <i class="fa fa-times-circle-o"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_project_mandays") %></span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F005.MeetingNote.aspx">
+                                <i class="fa fa-clipboard"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_meeting_notes") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/admin/F033.EstimationList.aspx">
+                                <i class="fa fa-file-text"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_estimation_list") %></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <% } %>
+                <% if (this.hasMemberRole)
+                    { %>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-smile-o"></i>
+                        <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_member") %></span>
+                    </a>
+                    <ul class="sub">
+                        <%--<% if (this.user.hasAccessToPage("F005.MeetingNote.aspx"))
+                            { %>--%>
+                       
+                        <%--<% } %>--%>
+                         <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F009.ChangeRequest.aspx">
+                                <i class="fa fa-refresh"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_change_request") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F010.ApplicationChangeTrx.aspx">
+                                <i class="fa fa-clipboard"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_application_change_trx") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F014.Problem.aspx">
+                                <i class="fa fa-file-text"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_problem") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F022.ListRequirements.aspx">
+                                <i class="fa fa-pencil-square-o"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_list_requirements") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F026.StaffScore.aspx">
+                                <i class="fa fa-star-half-o"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff_score") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/secure/F028.UserApprovalHierachy.aspx">
+                                <i class="fa fa-users"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_user_approval_hierachy") %></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-user"></i>
+                        <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff") %></span>
+                    </a>
+                    <ul class="sub">
+                        <%--<% if (this.user.hasAccessToPage("F005.MeetingNote.aspx"))
+                            { %>--%>
+                       
+                        <%--<% } %>--%>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/staff/F021.StaffTicket.aspx">
+                                <i class="fa fa-tags"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff_ticket") %></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= WebUtils.getAppServerPath() %>/staff/F017.StaffTicketGanntChart.aspx">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span><%= (string)GetGlobalResourceObject("GlobalResource", "menu_staff_ticket_gannt_chart") %></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <!--sidebar end-->
+
+        <asp:ContentPlaceHolder ID="ContentMainPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+        <footer class="site-footer">
+            <div class="text-center">
+                2018 &copy; ACI Software co,. ltd.
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+   <%-- <script src="<%= WebUtils.getAppServerPath() %>/include/js/jquery.js"></script>--%>
+
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/jquery.scrollTo.min.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/nicescroll/jquery.nicescroll.iframehelper.min.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/nicescroll/jquery.nicescroll.fixed.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/respond.min.js"></script>
+
+    <!--this page plugins-->
+
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
+
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
+
+    
+    <script type="text/javascript" src="<%= WebUtils.getAppServerPath() %>/include/js/jquery.tagsinput.js"></script>
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/respond.min.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/common-scripts.js"></script>
+
+    <!--this page  script only-->
+    <script src="<%= WebUtils.getAppServerPath() %>/include/js/advanced-form-components.js"></script>
+    <%--<script src="<%= WebUtils.getAppServerPath() %>/include/js/form-component.js"></script>--%>
+
+
+    <script>
+        //window.onload = function () {
+        //    document.getElementById('sideBarToggle').click();
+        //    document.getElementById('sidebar').className = "sidebar-close";
+        //};
+        $("body").niceScroll({
+            cursorcolor: '#191e3a',
+            cursorwidth: "12px",
+            cursorborder: "1px solid #009688"
+        });
+
+        $("#divGantttChart").niceScroll({
+            cursorcolor: '#191e3a',
+            cursorwidth: "12px",
+            bouncescroll : true,
+            cursorborder: "1px solid #009688"
+        });
+        
+        $(".nicescroll-box").niceScroll(".wrap", { cursorcolor: '#009688', cursorborder: "1px solid #009688" });
+        $(".do-nicescrol").niceScroll({ cursorwidth: "5px", cursorcolor: "#009688", cursorborder: "1px solid #009688" });
+    </script>
+    
+</body>
+</html>

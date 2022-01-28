@@ -1,0 +1,207 @@
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link type="text/css" rel="stylesheet" href="./css/application.css" />
+
+  <script src="./lib/jquery.js"></script>
+  <script src="./lib/jquery-ui.js"></script>
+  <script src="./lib/jquery.browser.js"></script>
+
+  <script src="../draw2d.js"></script>
+
+    <script src="./app/Application.js"></script>
+    <script src="./app/View.js"></script>
+    <script src="./app/Toolbar.js"></script>
+    <script src="./app/TableShape.js"></script>
+
+    <!--<script src="document.js"></script>-->
+
+	<style>
+	.draw2d_InputPort{
+	   fill:#F7F7F7;
+	   stroke:#d7d7d7;
+	}
+    .draw2d_OutputPort{
+       fill:#F7F7F7;
+       stroke:#d7d7d7;
+    }
+	</style>
+<script type="text/javascript">
+    var jsonDocument =
+    [
+     {
+         "type": "TableShape",
+         "id": "63c0f27a-716e-804c-6873-cd99b945b63f",
+         "x": 80,
+         "y": 59,
+         "width": 99,
+         "height": 107,
+         "userData": {},
+         "cssClass": "TableShape",
+         "bgColor": "#DBDDDE",
+         "color": "#D7D7D7",
+         "stroke": 1,
+         "alpha": 1,
+         "radius": 3,
+         "name": "Group",
+         "entities": [
+           {
+               "text": "id",
+               "id": "49be7d78-4dcf-38ab-3733-b4108701f1"
+           },
+           {
+               "text": "employee_fk",
+               "id": "49be7d78-4dcf-38ab-3733-b4108701fce4"
+           }
+         ]
+     },
+     {
+         "type": "TableShape",
+         "id": "3253ff2a-a920-09d5-f033-ca759a778e19",
+         "x": 255,
+         "y": 246,
+         "width": 99,
+         "height": 155,
+         "userData": {},
+         "cssClass": "TableShape",
+         "bgColor": "#DBDDDE",
+         "color": "#D7D7D7",
+         "stroke": 1,
+         "alpha": 1,
+         "radius": 3,
+         "name": "Employee",
+         "entities": [
+           {
+               "text": "id",
+               "id": "e97f6f8a-4306-0667-3a95-0a5310a2c15c"
+           },
+           {
+               "text": "firstName",
+               "id": "357e132c-aa47-978f-a1fa-d13da6736989"
+           },
+           {
+               "text": "lastName",
+               "id": "a2156a71-f868-1f8f-e9a1-b185dbdfc3de"
+           },
+           {
+               "text": "company_fk",
+               "id": "8d410fef-5c6e-286d-c9c3-c152d5bd9c52"
+           }
+         ]
+     },
+     {
+         "type": "TableShape",
+         "id": "2810494b-931f-da59-fd9d-6deba4385fe0",
+         "x": 460,
+         "y": 79,
+         "width": 99,
+         "height": 83,
+         "userData": {},
+         "cssClass": "TableShape",
+         "bgColor": "#DBDDDE",
+         "color": "#D7D7D7",
+         "stroke": 1,
+         "alpha": 1,
+         "radius": 3,
+         "name": "Company",
+         "entities": [
+           {
+               "text": "id",
+               "id": "e04ebb27-43c9-1afa-a7d0-e55bf2aa62d5"
+           }
+         ]
+     },
+     {
+         "type": "draw2d.Connection",
+         "id": "19acf411-a02f-557a-7451-f3a741676c7b",
+         "userData": {},
+         "cssClass": "draw2d_Connection",
+         "stroke": 2,
+         "color": "#4caf50",
+         "outlineStroke": 1,
+         "outlineColor": "#ffffff",
+         "policy": "draw2d.policy.line.LineSelectionFeedbackPolicy",
+         "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+         "radius": 2,
+         "source": {
+             "node": "3253ff2a-a920-09d5-f033-ca759a778e19",
+             "port": "output_8d410fef-5c6e-286d-c9c3-c152d5bd9c52"
+         },
+         "target": {
+             "node": "2810494b-931f-da59-fd9d-6deba4385fe0",
+             "port": "input_e04ebb27-43c9-1afa-a7d0-e55bf2aa62d5"
+         }
+     },
+     {
+         "type": "draw2d.Connection",
+         "id": "81cb3b59-66d1-ffc4-3cb7-0bad52ace43b",
+         "userData": {},
+         "cssClass": "draw2d_Connection",
+         "stroke": 2,
+         "color": "#4caf50",
+         "outlineStroke": 1,
+         "outlineColor": "#ffffff",
+         "policy": "draw2d.policy.line.LineSelectionFeedbackPolicy",
+         "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+         "radius": 2,
+         "source": {
+             "node": "63c0f27a-716e-804c-6873-cd99b945b63f",
+             "port": "output_49be7d78-4dcf-38ab-3733-b4108701fce4"
+         },
+         "target": {
+             "node": "3253ff2a-a920-09d5-f033-ca759a778e19",
+             "port": "input_e97f6f8a-4306-0667-3a95-0a5310a2c15c"
+         }
+     }
+    ];
+
+/**
+ * @method
+ * Factory method to provide a default connection for all drag&drop connections. You
+ * can override this method and customize this for your personal purpose.
+ *
+ * @param {draw2d.Port} sourcePort port of the source of the connection
+ * @param {draw2d.Port} targetPort port of the target of the connection
+ * @template
+ * @returns {draw2d.Connection}
+ */
+
+document.addEventListener("DOMContentLoaded",function () {
+
+    var routerToUse =new draw2d.layout.connection.InteractiveManhattanConnectionRouter();
+    var app  = new example.Application();
+    app.view.installEditPolicy(  new draw2d.policy.connection.DragConnectionCreatePolicy({
+        createConnection: function(){
+            var connection = new draw2d.Connection({
+                stroke:3,
+                outlineStroke:1,
+                outlineColor:"#303030",
+                color:"91B93E",
+                router:routerToUse
+            });
+            return connection;
+        }
+    }));
+
+
+    // unmarshal the JSON document into the canvas
+    // (load)
+    var reader = new draw2d.io.json.Reader();
+    reader.unmarshal(app.view, jsonDocument);
+
+});
+
+
+</script>
+
+</head>
+
+<body id="container">
+   <div id="canvas" >
+   </div>
+</body>
+</html>

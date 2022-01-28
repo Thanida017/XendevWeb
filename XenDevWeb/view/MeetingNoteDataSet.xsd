@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MeetingNoteDataSet" targetNamespace="http://tempuri.org/MeetingNoteDataSet.xsd" xmlns:mstns="http://tempuri.org/MeetingNoteDataSet.xsd" xmlns="http://tempuri.org/MeetingNoteDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MeetingNoteDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MeetingNoteDataSet" msprop:Generator_UserDSName="MeetingNoteDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MeetingNote" msprop:Generator_TableClassName="MeetingNoteDataTable" msprop:Generator_TableVarName="tableMeetingNote" msprop:Generator_RowChangedName="MeetingNoteRowChanged" msprop:Generator_TablePropName="MeetingNote" msprop:Generator_RowDeletingName="MeetingNoteRowDeleting" msprop:Generator_RowChangingName="MeetingNoteRowChanging" msprop:Generator_RowEvHandlerName="MeetingNoteRowChangeEventHandler" msprop:Generator_RowDeletedName="MeetingNoteRowDeleted" msprop:Generator_RowClassName="MeetingNoteRow" msprop:Generator_UserTableName="MeetingNote" msprop:Generator_RowEvArgName="MeetingNoteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="logo" msprop:Generator_ColumnVarNameInTable="columnlogo" msprop:Generator_ColumnPropNameInRow="logo" msprop:Generator_ColumnPropNameInTable="logoColumn" msprop:Generator_UserColumnName="logo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="projectName" msprop:Generator_ColumnVarNameInTable="columnprojectName" msprop:Generator_ColumnPropNameInRow="projectName" msprop:Generator_ColumnPropNameInTable="projectNameColumn" msprop:Generator_UserColumnName="projectName" type="xs:string" minOccurs="0" />
+              <xs:element name="meetingDateTime" msprop:Generator_ColumnVarNameInTable="columnmeetingDateTime" msprop:Generator_ColumnPropNameInRow="meetingDateTime" msprop:Generator_ColumnPropNameInTable="meetingDateTimeColumn" msprop:Generator_UserColumnName="meetingDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="text" msprop:Generator_ColumnVarNameInTable="columntext" msprop:Generator_ColumnPropNameInRow="text" msprop:Generator_ColumnPropNameInTable="textColumn" msprop:Generator_UserColumnName="text" type="xs:string" minOccurs="0" />
+              <xs:element name="meetingTitle" msprop:Generator_ColumnVarNameInTable="columnmeetingTitle" msprop:Generator_ColumnPropNameInRow="meetingTitle" msprop:Generator_ColumnPropNameInTable="meetingTitleColumn" msprop:Generator_UserColumnName="meetingTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="round" msprop:Generator_ColumnVarNameInTable="columnround" msprop:Generator_ColumnPropNameInRow="round" msprop:Generator_ColumnPropNameInTable="roundColumn" msprop:Generator_UserColumnName="round" type="xs:string" minOccurs="0" />
+              <xs:element name="createdBy" msprop:Generator_ColumnVarNameInTable="columncreatedBy" msprop:Generator_ColumnPropNameInRow="createdBy" msprop:Generator_ColumnPropNameInTable="createdByColumn" msprop:Generator_UserColumnName="createdBy" type="xs:string" minOccurs="0" />
+              <xs:element name="attendNames" msprop:Generator_ColumnVarNameInTable="columnattendNames" msprop:Generator_ColumnPropNameInRow="attendNames" msprop:Generator_ColumnPropNameInTable="attendNamesColumn" msprop:Generator_UserColumnName="attendNames" type="xs:string" minOccurs="0" />
+              <xs:element name="ccTo" msprop:Generator_ColumnVarNameInTable="columnccTo" msprop:Generator_ColumnPropNameInRow="ccTo" msprop:Generator_ColumnPropNameInTable="ccToColumn" msprop:Generator_UserColumnName="ccTo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ImageView" msprop:Generator_TableClassName="ImageViewDataTable" msprop:Generator_TableVarName="tableImageView" msprop:Generator_RowChangedName="ImageViewRowChanged" msprop:Generator_TablePropName="ImageView" msprop:Generator_RowDeletingName="ImageViewRowDeleting" msprop:Generator_RowChangingName="ImageViewRowChanging" msprop:Generator_RowEvHandlerName="ImageViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ImageViewRowDeleted" msprop:Generator_RowClassName="ImageViewRow" msprop:Generator_UserTableName="ImageView" msprop:Generator_RowEvArgName="ImageViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image" msprop:Generator_ColumnVarNameInTable="columnimage" msprop:Generator_ColumnPropNameInRow="image" msprop:Generator_ColumnPropNameInTable="imageColumn" msprop:Generator_UserColumnName="image" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

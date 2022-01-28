@@ -1,0 +1,36 @@
+﻿
+th {
+    text-align: center !important;
+    font-weight: bold;
+}
+
+.reportTtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.mbox {   
+    display: block;
+    float: left;
+    margin: 15px 10px 10px 15px;
+}
+
+.mbox2 {   
+    display: block;
+    float: left;
+    margin: 15px 10px 10px 15px;
+    font-size: 9pt;
+}
+
+table, th, td {
+  padding: 3px;
+}
+
+table{
+  border-collapse: collapse;
+}

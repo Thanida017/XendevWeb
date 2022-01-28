@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BUG" xml:space="preserve">
+    <value>Bug</value>
+  </data>
+  <data name="BUSINESS_CHANGE" xml:space="preserve">
+    <value>Business change</value>
+  </data>
+  <data name="CUSTOMER_REQUIREMENT_CHANGE" xml:space="preserve">
+    <value>Customer requirement change</value>
+  </data>
+  <data name="DEV_DESIGN_CHANGE" xml:space="preserve">
+    <value>Dev design change</value>
+  </data>
+  <data name="grid_AppAssetRc.HeaderText" xml:space="preserve">
+    <value>Application asset</value>
+  </data>
+  <data name="grid_ChangeCodeRc.HeaderText" xml:space="preserve">
+    <value>Change code</value>
+  </data>
+  <data name="grid_ChangeTrxRc.HeaderText" xml:space="preserve">
+    <value>Change Records</value>
+  </data>
+  <data name="grid_ChangeTypeRc.HeaderText" xml:space="preserve">
+    <value>ChangeType</value>
+  </data>
+  <data name="grid_LastUpdateRc.HeaderText" xml:space="preserve">
+    <value>LastUpdate</value>
+  </data>
+  <data name="grid_RequestDateRc.HeaderText" xml:space="preserve">
+    <value>Request Date</value>
+  </data>
+  <data name="lblAddChangeRequestRc.Text" xml:space="preserve">
+    <value>Add change request</value>
+  </data>
+  <data name="lblAppAssetRc.Text" xml:space="preserve">
+    <value>Application asset</value>
+  </data>
+  <data name="lblBtnAddRc.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lblBtnSearchRc.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="lblChangeCodeRc.Text" xml:space="preserve">
+    <value>Change code</value>
+  </data>
+  <data name="lblChangeRequestRc.Text" xml:space="preserve">
+    <value>Change request</value>
+  </data>
+  <data name="lblChangeTypeRc.Text" xml:space="preserve">
+    <value>ChangeType</value>
+  </data>
+  <data name="lblDBChangeRequestRc.Text" xml:space="preserve">
+    <value>Change Request in database</value>
+  </data>
+  <data name="lblProjectRc.Text" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="lblRequestDateRc.Text" xml:space="preserve">
+    <value>Request Date</value>
+  </data>
+  <data name="lblRowPerPageRc.Text" xml:space="preserve">
+    <value>Row Per Page</value>
+  </data>
+  <data name="lblSearchGridByRc.Text" xml:space="preserve">
+    <value>Title Search</value>
+  </data>
+  <data name="lblSearchGridTextRc.Text" xml:space="preserve">
+    <value>Search Text</value>
+  </data>
+  <data name="lblSearchProjectRc.Text" xml:space="preserve">
+    <value>Project Search</value>
+  </data>
+  <data name="NEW_FEATURE" xml:space="preserve">
+    <value>New feature</value>
+  </data>
+  <data name="txtChangeCodeRc.ErrorMessage" xml:space="preserve">
+    <value>Please enter change code</value>
+  </data>
+  <data name="txtChangeCodeRc.PlaceHolder" xml:space="preserve">
+    <value>Enter change code</value>
+  </data>
+  <data name="txtRowPerPageNumericRc.ErrorMessage" xml:space="preserve">
+    <value>Please Enter Row Per Page In Numeric</value>
+  </data>
+  <data name="txtRowPerPageRc.ErrorMessage" xml:space="preserve">
+    <value>Please Enter Row Per Page</value>
+  </data>
+  <data name="txtRowPerPageRc.PlaceHolder" xml:space="preserve">
+    <value>Enter Row Per Page</value>
+  </data>
+  <data name="txtSearchGridTextRc.PlaceHolder" xml:space="preserve">
+    <value>Enter Search</value>
+  </data>
+  <data name="lblSelCompanyRc.Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="grid_ChangeColorRc.HeaderText" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="lblChangeColorRc.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="grid_mandaysRc.HeaderText" xml:space="preserve">
+    <value>Manday</value>
+  </data>
+  <data name="lblMandayRc.Text" xml:space="preserve">
+    <value>Manday</value>
+  </data>
+  <data name="txtGrid_mandaysInNumericRc.errorMessage" xml:space="preserve">
+    <value>Please enter manday in numeric</value>
+  </data>
+  <data name="txtGrid_mandaysRc.errorMessage" xml:space="preserve">
+    <value>Please enter manday</value>
+  </data>
+  <data name="txtGrid_mandaysRc.PlaceHolder" xml:space="preserve">
+    <value>Enter Manday</value>
+  </data>
+  <data name="txtMandayInNumericRc.errorMessage" xml:space="preserve">
+    <value>Please enter manday in numeric</value>
+  </data>
+  <data name="txtMandayRc.errorMessage" xml:space="preserve">
+    <value>Please enter manday</value>
+  </data>
+  <data name="txtMandayRc.PlaceHolder" xml:space="preserve">
+    <value>Enter manday</value>
+  </data>
+</root>

@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="code_in_use" xml:space="preserve">
+    <value>Code '{0}' aready in used.</value>
+  </data>
+  <data name="confirm_delete" xml:space="preserve">
+    <value>Confirm Delete Data?</value>
+  </data>
+  <data name="co_Ltd" xml:space="preserve">
+    <value>Company Limited</value>
+  </data>
+  <data name="dataIsUse" xml:space="preserve">
+    <value>Unable to delete data. This record is in use or has reference data.</value>
+  </data>
+  <data name="khun" xml:space="preserve">
+    <value>Khun</value>
+  </data>
+  <data name="legal_person" xml:space="preserve">
+    <value>Legal person</value>
+  </data>
+  <data name="miss" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="mr" xml:space="preserve">
+    <value>Mr</value>
+  </data>
+  <data name="ms" xml:space="preserve">
+    <value>Ms</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="part_Ltd" xml:space="preserve">
+    <value>Partnership Limited</value>
+  </data>
+  <data name="public_com" xml:space="preserve">
+    <value>Public Company</value>
+  </data>
+  <data name="pub_Co_Ltd" xml:space="preserve">
+    <value>Public Company Limited</value>
+  </data>
+  <data name="select_option" xml:space="preserve">
+    <value>Select option</value>
+  </data>
+  <data name="successfully_deletedRc" xml:space="preserve">
+    <value>Successfully deleted.</value>
+  </data>
+  <data name="successfully_savedRc" xml:space="preserve">
+    <value>Data successfully saved.</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="no_data" xml:space="preserve">
+    <value>No data.</value>
+  </data>
+  <data name="menu_admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="menu_company_master" xml:space="preserve">
+    <value>Company Master</value>
+  </data>
+  <data name="menu_meeting_notes" xml:space="preserve">
+    <value>Meeting Notes</value>
+  </data>
+  <data name="menu_member" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="menu_project" xml:space="preserve">
+    <value>Project Master</value>
+  </data>
+  <data name="menu_user_account" xml:space="preserve">
+    <value>User Account</value>
+  </data>
+  <data name="upload" xml:space="preserve">
+    <value>upload</value>
+  </data>
+  <data name="code_changed" xml:space="preserve">
+    <value>code changed</value>
+  </data>
+  <data name="customer_accept" xml:space="preserve">
+    <value>customer accept</value>
+  </data>
+  <data name="customer_reject" xml:space="preserve">
+    <value>customer reject</value>
+  </data>
+  <data name="developer_cancel" xml:space="preserve">
+    <value>developer cancel</value>
+  </data>
+  <data name="new_chang" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="menu_change_request" xml:space="preserve">
+    <value>Change Request</value>
+  </data>
+  <data name="menu_reject_reason_master" xml:space="preserve">
+    <value>Reject Reason Master</value>
+  </data>
+  <data name="change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="select_image" xml:space="preserve">
+    <value>Select image</value>
+  </data>
+  <data name="menu_staff_account" xml:space="preserve">
+    <value>Staff Account</value>
+  </data>
+  <data name="menu_user_image" xml:space="preserve">
+    <value>Image UserAccount</value>
+  </data>
+  <data name="menu_create_staff_assignment" xml:space="preserve">
+    <value>Create Staff Assignment</value>
+  </data>
+  <data name="menu_staff_gannt_chart" xml:space="preserve">
+    <value>Staff Gannt Chart</value>
+  </data>
+  <data name="menu_ApprovalHierarchy" xml:space="preserve">
+    <value>Approval Hierarchy</value>
+  </data>
+  <data name="design" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="meeting" xml:space="preserve">
+    <value>Meeting</value>
+  </data>
+  <data name="requirement" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="testing" xml:space="preserve">
+    <value>Testing</value>
+  </data>
+  <data name="no_record" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="email_sended_failed" xml:space="preserve">
+    <value>Sending email to '{0}' failed.</value>
+  </data>
+  <data name="email_sended_success" xml:space="preserve">
+    <value>Email sended to '{0}'.</value>
+  </data>
+  <data name="confirm_saved" xml:space="preserve">
+    <value>Confirm Save Data?</value>
+  </data>
+  <data name="menu_application_change_trx" xml:space="preserve">
+    <value>Application Change Trx</value>
+  </data>
+  <data name="menu_list_requirements" xml:space="preserve">
+    <value>List Requirements</value>
+  </data>
+  <data name="menu_problem" xml:space="preserve">
+    <value>Problem Master</value>
+  </data>
+  <data name="menu_staff_score" xml:space="preserve">
+    <value>Staff Score</value>
+  </data>
+  <data name="menu_staff_ticket" xml:space="preserve">
+    <value>Staff Ticket Master</value>
+  </data>
+  <data name="menu_user_approval_hierachy" xml:space="preserve">
+    <value>User Approval Hierachy</value>
+  </data>
+  <data name="menu_project_mandays" xml:space="preserve">
+    <value>Project Mandays</value>
+  </data>
+  <data name="menu_staff" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="menu_staff_ticket_gannt_chart" xml:space="preserve">
+    <value>Staff Ticket Gannt Chart</value>
+  </data>
+  <data name="confirm_submited" xml:space="preserve">
+    <value>Confirm Submit Data?</value>
+  </data>
+  <data name="confirm_send_estimation_request" xml:space="preserve">
+    <value>Confirm Send Estimation Request?</value>
+  </data>
+  <data name="menu_estimation_list" xml:space="preserve">
+    <value>Estimation Lists</value>
+  </data>
+</root>

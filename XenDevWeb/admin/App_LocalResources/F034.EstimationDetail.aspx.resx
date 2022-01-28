@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="gridReportDescriptionRc.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="gridReportNameRc.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblBtnBackRc.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="lblBtnSaveRc.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="lblCommentRc.Text" xml:space="preserve">
+    <value>Admin Comment</value>
+  </data>
+  <data name="lblCompanyNameRc.Text" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="lblContactEmailRc.Text" xml:space="preserve">
+    <value>Contact Email</value>
+  </data>
+  <data name="lblContactPersonNameRc.Text" xml:space="preserve">
+    <value>Contact Person Name</value>
+  </data>
+  <data name="lblContactPhoneNumberRc.Text" xml:space="preserve">
+    <value>Contact Phone Number</value>
+  </data>
+  <data name="lblDataOptionRc.Text" xml:space="preserve">
+    <value>Data Option</value>
+  </data>
+  <data name="lblDescriptionRc.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblInputHeaderRc.Text" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="lblIsDesktopRc.Text" xml:space="preserve">
+    <value>Desktop</value>
+  </data>
+  <data name="lblIsExcelUploadRc.Text" xml:space="preserve">
+    <value>Excel Upload</value>
+  </data>
+  <data name="lblIsFileUploadRc.Text" xml:space="preserve">
+    <value>File Upload</value>
+  </data>
+  <data name="lblIsFormEntryRc.Text" xml:space="preserve">
+    <value>Form Entry</value>
+  </data>
+  <data name="lblIsMigrateFromExcelRc.Text" xml:space="preserve">
+    <value>Migrate From Excel</value>
+  </data>
+  <data name="lblIsMigrateFromOldDatabaseRc.Text" xml:space="preserve">
+    <value>Migrate From Old Database</value>
+  </data>
+  <data name="lblIsMigrateFromOtherRc.Text" xml:space="preserve">
+    <value>Migrate From Other</value>
+  </data>
+  <data name="lblIsMobileRc.Text" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="lblIsMustIntegrateToExistingSoftwareRc.Text" xml:space="preserve">
+    <value>Must Integrate To Existing Software</value>
+  </data>
+  <data name="lblIsOtherRc.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="lblIsWebRc.Text" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="lblProjectDetailRc.Text" xml:space="preserve">
+    <value>Project Detail</value>
+  </data>
+  <data name="lblProjectNameRc.Text" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="lblReportDescriptionRc.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblReportHeaderRc.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="lblReportNameRc.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblStatusRc.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lblStyleHeaderRc.Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="pls_enter_other" xml:space="preserve">
+    <value>Please enter other details.</value>
+  </data>
+  <data name="txtCommentRc.errorMessage" xml:space="preserve">
+    <value>Please enter comment</value>
+  </data>
+  <data name="txtCommentRc.PlaceHolder" xml:space="preserve">
+    <value>Enter Comment</value>
+  </data>
+  <data name="txtCompanyNameRc.errorMessage" xml:space="preserve">
+    <value>Please enter company name</value>
+  </data>
+  <data name="txtCompanyNameRc.PlaceHolder" xml:space="preserve">
+    <value>Enter company name</value>
+  </data>
+  <data name="txtContactEmailRc.errorMessage" xml:space="preserve">
+    <value>Please enter contact email</value>
+  </data>
+  <data name="txtContactEmailRc.PlaceHolder" xml:space="preserve">
+    <value>Enter contact email</value>
+  </data>
+  <data name="txtContactPersonNameRc.errorMessage" xml:space="preserve">
+    <value>Please enter contact person name</value>
+  </data>
+  <data name="txtContactPersonNameRc.PlaceHolder" xml:space="preserve">
+    <value>Enter contact person name</value>
+  </data>
+  <data name="txtContactPhoneNumberRc.errorMessage" xml:space="preserve">
+    <value>Please enter contact phone number</value>
+  </data>
+  <data name="txtContactPhoneNumberRc.PlaceHolder" xml:space="preserve">
+    <value>Enter contact phone number</value>
+  </data>
+  <data name="txtIsMigrateFromOtherRc.errorMessage" xml:space="preserve">
+    <value>Please enter migrate from other</value>
+  </data>
+  <data name="txtIsMigrateFromOtherRc.PlaceHolder" xml:space="preserve">
+    <value>Enter migrate from other..</value>
+  </data>
+  <data name="txtIsOtherRc.errorMessage" xml:space="preserve">
+    <value>Please enter other</value>
+  </data>
+  <data name="txtIsOtherRc.PlaceHolder" xml:space="preserve">
+    <value>Enter Other</value>
+  </data>
+  <data name="txtProjectNameRc.PlaceHolder" xml:space="preserve">
+    <value>Enter project name</value>
+  </data>
+  <data name="txtReportDescriptionRc.errorMessage" xml:space="preserve">
+    <value>Please enter descriotion</value>
+  </data>
+  <data name="txtReportDescriptionRc.PlaceHolder" xml:space="preserve">
+    <value>Enter description</value>
+  </data>
+  <data name="txtReportNameRc.errorMessage" xml:space="preserve">
+    <value>Please enter name</value>
+  </data>
+  <data name="txtReportNameRc.PlaceHolder" xml:space="preserve">
+    <value>Enter name</value>
+  </data>
+  <data name="Accepted" xml:space="preserve">
+    <value>Accepted</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+</root>
